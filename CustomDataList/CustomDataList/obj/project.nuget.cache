@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bTbIyC7cxmuH5NaU8lDdGeVMbNtB+hnZm42yI/OpHCJJtb2KO8vl4apBrCR02BGIALObkc2lRvJwbNasu+m9Ew==",
+  "dgSpecHash": "oRgKNw4DL4TwsdAP47mxkhN0Id7dNxxFDm3vLPJjEYde1pK2VCsvel1DLupo5Q8OPA+FVoScAR27O9JfbYn+Iw==",
   "success": true,
   "projectFilePath": "C:\\Users\\casper\\source\\repos\\CustomDataList\\CustomDataList\\CustomDataList.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\casper\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.24\\microsoft.netcore.app.host.win-x64.3.1.24.nupkg.sha512"
+  ],
   "logs": []
 }

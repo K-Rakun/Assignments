@@ -55,6 +55,18 @@ namespace CustomDataList
                         IncreaseCapacity(customDataList);
                         Console.ReadKey();
                         break;
+                    case "9":
+                        customDataList.SortByAverageScore();
+                        Console.ReadKey();
+                        break;
+                    case "10":
+                        customDataList.GetMaxElement();
+                        Console.ReadKey();
+                        break;
+                    case "11":
+                        customDataList.GetMinElement();
+                        Console.ReadKey();
+                        break;
                 }
 
                 if (userChoice == "0")
@@ -128,6 +140,9 @@ namespace CustomDataList
             Console.WriteLine("6. Remove Last");
             Console.WriteLine("7. Display List");
             Console.WriteLine("8. Increase Capacity");
+            Console.WriteLine("9. Sort by Average Score");
+            Console.WriteLine("10. Get Max Element");
+            Console.WriteLine("11. Get Min Element");
             Console.WriteLine("0. Exit");
             Console.WriteLine("Please enter your choice");
 

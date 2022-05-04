@@ -166,6 +166,86 @@ namespace CustomDataList
             }
         }
 
+        public void SortByAverageScore()
+        {
+            Student[] sortedArrey = new Student[studentList.Length];
+            int fakeUsedPlaces = usedPlaces;
+            for (int i = 0; i < usedPlaces; i++)
+            {
+                int n = 0;
+                Student getElement = studentList[0];
+                for (int t = 0; t < fakeUsedPlaces; t++)
+                {
+                    if (getElement.AverageScore < studentList[t].AverageScore)
+                    {
+                        getElement = studentList[t];
+                        n = t;
+                    }
+                }
+
+                for (int t = n; t < fakeUsedPlaces - 1; t++)
+                {
+                    studentList[t] = studentList[t + 1];
+                }
+
+                studentList[fakeUsedPlaces - 1] = null;
+                fakeUsedPlaces--;
+                
+                sortedArrey[i] = getElement;
+            }
+            studentList = sortedArrey;
+            Console.WriteLine("Sorted By Average Score");
+        }
+
+        public Student GetMaxElement()
+        {
+            int n = 0;
+            Student getElement = studentList[0];
+            for (int i = 0; i < usedPlaces ; i++)
+            {
+                if (getElement.AverageScore < studentList[i].AverageScore)
+                {
+                    getElement = studentList[i];
+                    n = i;
+                }
+            }
+
+            for (int i = n ; i < usedPlaces - 1; i++)
+            {
+                studentList[i] = studentList[i + 1];
+            }
+
+            studentList[usedPlaces - 1] = null;
+            usedPlaces--;
+            Console.WriteLine($"You are holding {getElement}");
+            return getElement;
+            
+        }
+
+        public Student GetMinElement()
+        {
+            int n = 0;
+            Student getElement = studentList[0];
+            for (int i = 0; i < usedPlaces; i++)
+            {
+                if (getElement.AverageScore > studentList[i].AverageScore)
+                {
+                    getElement = studentList[i];
+                    n = i;
+                }
+            }
+
+            for (int i = n; i < usedPlaces - 1; i++)
+            {
+                studentList[i] = studentList[i + 1];
+            }
+
+            studentList[usedPlaces - 1] = null;
+            usedPlaces--;
+            Console.WriteLine($"You are holding {getElement}");
+            return getElement;
+
+        }
 
     }
 }
